@@ -5,15 +5,14 @@ class TestController {
 //    static defaultAction = "hello"
 
     def testForward() {
-        println  "I am test1"
-        forward  controller:'user',action: "index"
-//        forward(controllerName:'user',actionName:'index')
+        println "I am testForward"
+        forward controller: 'user', action: "index"
     }
 
     def testRedirect() {
-        println  "I am test1"
-        redirect  controller:'user',action: "index"
-//        forward(controllerName:'user',actionName:'index')
+        println "I am testRedirect"
+        redirect controller: 'user', action: "show", params: [id: 1]
+//        redirect(controllerName:'user',actionName:'index')
     }
 
     def hello() {
@@ -24,8 +23,8 @@ class TestController {
         render "I am index>>>>>>>>>"
     }
 
-    def getValue(){
-        println  "I am getValue"
+    def getValue() {
+        println "I am getValue"
         render "I am getValue->>>>>forwarded request"
     }
 
